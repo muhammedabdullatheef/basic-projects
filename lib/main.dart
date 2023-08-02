@@ -1,4 +1,7 @@
+import 'package:app/chat%20page.dart';
 import 'package:app/myname.dart';
+import 'package:app/stack%20task.dart';
+import 'package:app/stack.dart';
 import 'package:app/task%201.dart';
 import 'package:app/task%202.dart';
 import 'package:app/task%204.dart';
@@ -6,13 +9,21 @@ import 'package:app/task%207%20.dart';
 import 'package:app/task3.dart';
 import 'package:app/task5.dart';
 import 'package:app/task6.dart';
-import 'package:app/whatsapp%20UI.dart';
+import 'package:app/telegram%20task/telegram%20UI.dart';
+import 'package:app/whatsapp%20task/WhatsApp%20Home%20Page%20Ui.dart';
+import 'package:app/whatsapp%20task/contact%20page.dart';
+import 'package:app/whatsapp%20task/whatsapp%20UI.dart';
 import 'package:flutter/material.dart';
 
+import 'InkWell task/page1.dart';
+import 'bottom nav.dart';
 import 'calcuter task.dart';
 import 'futura labs sign up page.dart';
+import 'gmail task/gmail home page UI.dart';
+import 'gmail task/video chat page.dart';
 import 'graph task.dart';
 import 'list view.dart';
+import 'login pages/login page using stack.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -45,7 +57,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-        home: whatsappUI()
+        home: BottomNav(),
+        routes: {
+        "/chatpage":(BuildContext context)=>ChatPage(),
+
+        },
     );
   }
 }
