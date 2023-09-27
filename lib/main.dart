@@ -1,29 +1,62 @@
+import 'package:app/DatePiker.dart';
+import 'package:app/SharedPreferences.dart';
 import 'package:app/chat%20page.dart';
 import 'package:app/myname.dart';
 import 'package:app/stack%20task.dart';
 import 'package:app/stack.dart';
+import 'package:app/tabbar%20page.dart';
 import 'package:app/task%201.dart';
 import 'package:app/task%202.dart';
 import 'package:app/task%204.dart';
 import 'package:app/task%207%20.dart';
+import 'package:app/task%208.dart';
+import 'package:app/task%20shared%20prefer.dart';
 import 'package:app/task3.dart';
-import 'package:app/task5.dart';
-import 'package:app/task6.dart';
-import 'package:app/telegram%20task/telegram%20UI.dart';
-import 'package:app/whatsapp%20task/WhatsApp%20Home%20Page%20Ui.dart';
-import 'package:app/whatsapp%20task/contact%20page.dart';
-import 'package:app/whatsapp%20task/whatsapp%20UI.dart';
+import 'package:app/login%20pages/SingUp page.dart';
+import 'package:app/login%20pages/login page.dart';
+import 'package:app/ProfilePage.2.dart';
 import 'package:flutter/material.dart';
 
+import 'AnimationTsak2.dart';
+import 'AnimationWidTsk.dart';
+import 'ApiTsk.dart';
+import 'CircularProgressIndicatorTsk.dart';
+import 'DropDownTsk.dart';
+import 'FuturBuilderTsk.dart';
+import 'FutureDelayedTsk.dart';
+import 'FutureDlyedTsk2.dart';
+import 'Gallery Task.dart';
+import 'GeolocatorTsk.dart';
+import 'GradianetTask.dart';
+import 'GridView Task2.dart';
 import 'InkWell task/page1.dart';
-import 'bottom nav.dart';
+import 'MyGridView Task.dart';
+import 'MyGridViewBuilder.dart';
+import 'MyRatingBarTsk.dart';
+import 'SharedPreTsk.dart';
+import 'SharedTsk2.dart';
+import 'StreamFunction.dart';
+import 'WEdViewTsk.dart';
+import 'WebSiteTsk.dart';
+import 'WebViewtask2.dart';
+import 'Webview.dart';
+import 'constructor task.dart';
+import 'duration.dart';
+import 'gmail task/bottom nav.dart';
 import 'calcuter task.dart';
+import 'card task.dart';
 import 'futura labs sign up page.dart';
 import 'gmail task/gmail home page UI.dart';
 import 'gmail task/video chat page.dart';
+import 'gradian.dart';
 import 'graph task.dart';
+import 'http base tsk.dart';
+import 'httpTsk.dart';
 import 'list view.dart';
+import 'login pages/log/sing bottom nav.dart';
 import 'login pages/login page using stack.dart';
+import 'myratingbar.dart';
+import 'new task 0.1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,14 +87,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-        home: BottomNav(),
-        routes: {
-        "/chatpage":(BuildContext context)=>ChatPage(),
-
-        },
+        home: WebSite(),
     );
   }
 }
@@ -153,3 +182,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+

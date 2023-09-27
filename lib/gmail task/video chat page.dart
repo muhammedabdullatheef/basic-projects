@@ -27,7 +27,7 @@ class _VideoMeetState extends State<VideoMeet> {
                 "M",
                 style: TextStyle(color: Colors.white),
               ),
-              backgroundColor: Colors.pink,
+              backgroundColor: Colors.redAccent,
             ),
           )
         ],

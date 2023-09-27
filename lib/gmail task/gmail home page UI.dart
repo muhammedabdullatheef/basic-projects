@@ -9,50 +9,62 @@ class GmailUi extends StatefulWidget {
 }
 
 class _GmailUiState extends State<GmailUi> {
+  List icon =[
+    "assets/images/download.png",
+    "assets/images/images.png",
+    "assets/images/IMG_20230802_100851.jpg",
+    "assets/images/spotify.png",
+    "assets/images/insta.jpg",
+    "assets/images/G.jpg",
+    "assets/images/Linked.in.png",
+    "assets/images/amazon.jpg",
+    "",
+    "assets/images/G.jpg",
+  ];
   List nameornumber = [
-    "6235428262",
-    "FUTURA LABS",
-    "Flutter sourav evaluation",
-    "AMAL Du",
-    "C2A",
-    "Sfwan Du",
-    "9779428262",
-    "Favaz",
-    "6235428262",
-    "6234528262",
+    "Promotins",
+    "Social",
+    "Futura Labs",
+    "Spotify",
+    "Instagram",
+    "GitHub",
+    "LinkedIn",
+    "Amazon.in",
+    "Indira Gandhi National Open..",
+    "GitHub",
   ];
   List messages = [
-    "hello",
-    "inn evaluation und",
-    "~Placements Futura:Flutt..",
-    "Evide",
-    "ATHUL:Happy bdy @~nihal..",
-    "ok da",
-    "Hi",
-    "Hi",
-    "good night",
-    "good night",
+    "AirTopTools,AiTopTools",
+    "Instagram",
+    "",
+    "Spotify Premium for free,click..",
+    "New login to instagram from...",
+    "[GitHub] please verify your device",
+    "Futura Labs and others shere their..",
+    "Delivered:your Amazon package..",
+    "Confirmation Mail",
+    "[GitHub] Welcome to GitHub..",
   ];
   List dete = [
-    "1.57 PM",
-    "12.45 AM",
-    "12:34 AM",
-    "11:00 AM",
-    "10:08 AM",
-    "9:57 AM",
-    "9:30 AM",
-    "7/24/23",
-    "7/24/23",
-    "7/23/23",
+    "41 new",
+    "46 new",
+    "Jul 27",
+    "Jul 13",
+    "Jul 11",
+    "Jul 10",
+    "Jul 9",
+    "Jun 28",
+    "Jun 28",
+    "Jun 24",
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.indigoAccent[500],
         child: Icon(
-          Icons.edit,
+          Icons.mode_edit_outline_outlined,
           color: Colors.black,
         ),
       ),
@@ -191,7 +203,7 @@ class _GmailUiState extends State<GmailUi> {
             padding: const EdgeInsets.only(right: 15),
             child: CircleAvatar(
               radius: 18,
-              backgroundColor: Colors.pink[800],
+              backgroundColor: Colors.redAccent,
               child: Text(
                 "M",
                 style: TextStyle(color: Colors.white),
@@ -200,34 +212,39 @@ class _GmailUiState extends State<GmailUi> {
           ),
         ],
       ),
-      body: SafeArea(
-        child: ListView.builder(
-            itemCount: nameornumber.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                leading: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: Colors.grey,
-                  child: Icon(
-                    Icons.person,
-                    size: 40,
-                    color: Colors.white54,
+      body:
+      SafeArea(
+        child:
+           ListView.builder(
+              itemCount: nameornumber.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  leading:
+                  icon[index]==""?CircleAvatar(radius: 30, backgroundColor: Colors.blueGrey[300],
+                    child: Icon(
+                      Icons.person,
+                      size: 45,
+                      color: Colors.white,
+                    ),):
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(icon[index]),
                   ),
-                ),
-                // Icon(icons[index], color: Colors.blueGrey, size: 60),
-                title: Text(nameornumber[index]),
-                subtitle: Text(messages[index]),
-                trailing: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6, top: 6),
-                      child: Text(dete[index]),
-                    ),
-                    Icon(Icons.star_border_sharp),
-                  ],
-                ),
-              );
-            }),
+                  // Icon(icons[index], color: Colors.blueGrey, size: 60),
+                  title: Text(nameornumber[index]),
+                  subtitle: Text(messages[index]),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6, top: 6),
+                        child: Text(dete[index]),
+                      ),
+                      Icon(Icons.star_border_sharp),
+                    ],
+                  ),
+                );
+              }),
+
       ),
     );
   }

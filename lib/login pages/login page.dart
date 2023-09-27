@@ -13,7 +13,7 @@ class login extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 110,bottom: 30),
-                child: Text("Login",style: TextStyle(fontSize: 60,fontWeight: FontWeight.w700),),
+                child: Text("Login",style: TextStyle(fontSize: 60,fontWeight: FontWeight.w700,color: Colors.purple[900]),),
               ),
 
               Padding(

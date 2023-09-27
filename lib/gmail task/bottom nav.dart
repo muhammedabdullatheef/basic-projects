@@ -2,8 +2,8 @@ import 'package:app/InkWell%20task/page1.dart';
 import 'package:app/InkWell%20task/page2.dart';
 import 'package:flutter/material.dart';
 
-import 'gmail task/gmail home page UI.dart';
-import 'gmail task/video chat page.dart';
+import 'gmail home page UI.dart';
+import 'video chat page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});

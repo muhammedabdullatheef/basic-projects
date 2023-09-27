@@ -13,7 +13,7 @@ class _Profile2State extends State<Profile2> {
 
   // const Profile2({super.key});
   String gender = "male";
-  String qualification="+2";
+  String qualification = "+2";
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,10 @@ class _Profile2State extends State<Profile2> {
       appBar: AppBar(
         title: Text(
           "Sign Up",
-          style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30),
+          style: TextStyle(
+              fontWeight: FontWeight.w800, fontSize: 30, color: Colors.white),
         ),
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.purple[900],
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -34,9 +35,11 @@ class _Profile2State extends State<Profile2> {
                 padding: const EdgeInsets.only(top: 20),
                 child: Center(
                   child: CircleAvatar(
-                    backgroundColor: Colors.grey,
+                    // backgroundColor: Colors.grey,
                     radius: 70,
-                    child: Icon(Icons.person, size: 80),
+                    backgroundImage:
+                        AssetImage("assets/images/IMG_20230802_100851.jpg"),
+                    // child: Icon(Icons.person, size: 80),
                   ),
                 ),
               ),
@@ -170,7 +173,8 @@ class _Profile2State extends State<Profile2> {
                       },
                       child: Text("other")),
                 ],
-              ),     Row(
+              ),
+              Row(
                 children: [
                   RadioMenuButton(
                       value: "PG",
@@ -228,21 +232,22 @@ class _Profile2State extends State<Profile2> {
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Container(
-                    width: 200,
-                    height: 60,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(50)),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        if (fkey.currentState!.validate()) {
-                          print(emailcontroller.text);
-                        }
-                      },
-                      child: Text(
-                        "Sign Up",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    )),
+                  width: 200,
+                  height: 60,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      if (fkey.currentState!.validate()) {
+                        print(emailcontroller.text);
+                      }
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
